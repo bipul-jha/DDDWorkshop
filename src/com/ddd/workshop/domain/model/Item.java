@@ -1,7 +1,8 @@
 package com.ddd.workshop.domain.model;
 
 public class Item {
-    private Product product;
+    private final Product product;
+    private final int quantity;
 
     @Override
     public String toString() {
@@ -10,8 +11,6 @@ public class Item {
                 ", quantity=" + quantity +
                 '}';
     }
-
-    private int quantity;
 
     public Item(Product product, int quantity) {
         this.product = product;

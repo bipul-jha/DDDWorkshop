@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private List<Item> items;
-    private List<Item> deletedItems;
+    private final List<Item> items;
+    private final List<Item> deletedItems;
 
     public Cart() {
-        items = new ArrayList<Item>();
+        items = new ArrayList<>();
         deletedItems = new ArrayList<>();
     }
 
@@ -21,13 +21,13 @@ public class Cart {
         items.remove(item);
     }
 
-    public void displayItems(){
+    public void displayItems() {
         for (Item item : items) {
             System.out.println(item);
         }
     }
 
-    public void displayDeletedItems(){
+    public void displayDeletedItems() {
         for (Item item : deletedItems) {
             System.out.println(item);
         }
